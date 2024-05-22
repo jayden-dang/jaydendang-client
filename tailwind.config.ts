@@ -13,8 +13,27 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: "#0F1218",
+        secondary: "#FF4F00",
+        priRed: "#B11016",
+        priGreen: "#2ABA9E",
+        priBlue: "#007096",
+      },
+      animation: {
+        roll: "roll 24s linear infinite"
+      },
+      keyframes:{
+        roll:{
+          "0%": {transform: "translateX(100%)"},
+          "100%": {transform: "translateX(-100%)"}
+        }
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+  ],
 };
 export default config;
