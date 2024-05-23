@@ -8,6 +8,7 @@ import createAuthHandler, {makePath as path} from '@/middleware/auth'
 const handleAuth = createAuthHandler({
   publicRoutes: [
     path(''),
+    path('/about-me')
   ]
 })
 

@@ -7,7 +7,7 @@ export default function NotFound() {
 
   return (
     <div>
-      Hello
+      {t('subText')}
     </div>
   )
 }
