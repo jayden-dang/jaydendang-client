@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import {useTranslations} from 'next-intl'
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Jayden Portfolio",
@@ -15,10 +16,14 @@ export interface RootLayoutProps {
 }
 
 async function RootLayout({children, params: { locale }}: RootLayoutProps) {
+  const messages = await getMessages();
+
   return (
     <html lang={locale}>
       <body className="bg-primary border-[0.1px] border-white/50 m-4">
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
