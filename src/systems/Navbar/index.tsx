@@ -17,7 +17,7 @@ const Navbar = (props: INavbarProps) => {
           <Link href="#" className="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_1px] bg-no-repeat hover:bg-[length:100%_1px] transition-all duration-200 ease-out">My Courses</Link>
           <Link href="/about-me" className="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_1px] bg-no-repeat hover:bg-[length:100%_1px] transition-all duration-200 ease-out">About Me</Link>
         </div>
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end mr-2">
           <button className="hover:bg-gray-100/20">
             <p className="border-[1px] border-white px-6 py-1">
               Log In
